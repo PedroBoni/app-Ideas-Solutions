@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Border Radius Previewer</title>
+</head>
+<body>
+    <h1>Border Radius Previewer</h1>
+    <label for="color"></label>
+    <input onchange="applyColor(event)" id="color" name="color" type="color">
+    <div class="row"> 
+        <input type="range" min="0" max="500" value="300" onchange="applySizeBox(event, 1)" step="1">
+        <input type="range" min="0" max="500" value="300" onchange="applySizeBox(event, 2)" step="1">
+    </div>
+    <div id="mode" class="row">
+        <p>Mode:</p>
+        <button onclick="applyMode(1)">Simple</button>
+        <button onclick="applyMode(2)">Medium</button>
+        <button onclick="applyMode(3)">Advanced</button>
+        <button id="copy" onclick="copyStyle(event)"><i class="far fa-copy"></i></button>
+    </div>
+    <form>
+        <div id="simple">
+            <input type="range" id="1" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+        </div>
+        <div id="medium">
+            <div class="row">
+                <input type="range" id="2" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+                <input type="range" id="3" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+                <input type="range" id="4" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+                <input type="range" id="5" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+            </div>
+        </div>
+        <div id="advanced">
+            <div class="row">
+                <div>Top Left</div> <div>Top Right</div> <div>Buttom Right</div> <div>Bottom Left</div> 
+            </div>
+            <div class="row">
+                X
+                <input type="range" id="6" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+                <input type="range" id="8" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+                <input type="range" id="10" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+                <input type="range" id="12" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+            </div>
+            <div class="row">
+                Y
+                <input type="range" id="7" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+                <input type="range" id="9" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+                <input type="range" id="11" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+                <input type="range" id="13" min="0" max="100" value="0" onchange="applyBorderRadius(event)" step="1">
+            </div>
+        </div>
+    </form>
+    <a href="https://github.com/PedroBoni">@PedroBoni</a>
+    <script src="https://kit.fontawesome.com/3b9fb27255.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
