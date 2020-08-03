@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cyberpunk Calc</title>
+</head>
+<body>
+    <div class="container">
+        <div class="result"> 
+            <div>
+                <p id="history" onchange="calculate()"></p>
+                <p id="result">17</p>
+            </div>
+            <button class="history"><img src="assets/history.svg"></button>
+        </div>
+        <div class="buttons">
+            <div class="top">
+                <button class="pink">C</button>
+                <button class="pink">AC</button>
+                <button class="pink">%</button>
+                <button onclick="setOperation('/')" class="pink">÷</button>
+            </div>
+            <div class="buttonsYellow">
+                <button onclick="setNumber('7')" class="yellow">7</button>
+                <button onclick="setNumber('8')" class="yellow">8</button>
+                <button onclick="setNumber('9')" class="yellow">9</button>
+                <button onclick="setNumber('4')" class="yellow">4</button>
+                <button onclick="setNumber('5')" class="yellow">5</button>
+                <button onclick="setNumber('6')" class="yellow">6</button>
+                <button onclick="setNumber('1')" class="yellow">1</button>
+                <button onclick="setNumber('2')" class="yellow">2</button>
+                <button onclick="setNumber('3')" class="yellow">3</button>
+                <button onclick="setNumber('.')" class="yellow">.</button>
+                <button onclick="setNumber('0')" class="import"><img src="assets/btnYellow.svg"></button>
+                <button onclick="setNumber('-')" class="yellow">+/-</button>
+            </div>  
+            <div class="right">          
+                <button onclick="setOperation('*')" class="pink">X</button>
+                <button onclick="setOperation('-')" class="pink">-</button>
+                <button onclick="setOperation('+')" class="pink">+</button>
+                <button class="import"><img src="assets/btnPink.svg"></button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

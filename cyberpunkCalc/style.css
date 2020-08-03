@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:ital,wght@0,500;1,500&display=swap');
+*{margin: 0; padding: 0; outline: none; box-sizing: border-box;}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(assets/background.jpg) no-repeat center;
+    background-size: cover;
+}
+.container{
+    max-width: 500px;
+}
+.buttons{
+    display: grid;
+    grid-template-columns:80px 80px 80px 80px ;
+    grid-template-rows: 80px 80px 80px 80px 80px;
+    grid-template-areas: 
+    "top top top top" 
+    "yellow yellow yellow right" 
+    "yellow yellow yellow right" 
+    "yellow yellow yellow right" 
+    "yellow yellow yellow right";
+}
+button{
+    width: 80px;
+    height: 80px;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+button:hover,
+button:active{
+    filter: contrast(1.4)
+}
+.history{
+    width: 31px;
+    height: 27px;
+    margin: 3px 0;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #EBDF39;
+}
+.result p:first-child{
+    font-size: 35px;
+    font-weight: bold;
+}
+.yellow, .import{
+    background-color: #EBDF39;
+    color: #161718;
+    font-size: 50px;   
+    font-family: 'Roboto Slab',sans-serif;
+}
+.import, .history{
+    background: none;
+}
+.pink{
+    background-color: #D5317C;
+    color: #E5E5E5;
+    font-size: 30px;   
+    font-family: 'Roboto',sans-serif;
+}
+.buttonsYellow{ 
+    grid-area: yellow;   
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+.top{
+    display: flex;
+    grid-area: top;
+}
+.right{
+    grid-area: right;
+}
